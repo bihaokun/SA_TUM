@@ -1,0 +1,10 @@
+import pandas as pd
+df = pd.DataFrame([[1, 2], [3, 4]], columns=list('AB'))
+df2 = pd.DataFrame([[5, 6], [7, 8]], columns=list('AC'))
+print(df)
+print(df2)
+df = df.append(df2)
+print(df)
+print(df.at[0,'B'])
+df.to_csv(r'test.csv',index=False,header=0)
+print(df.shape[1])
